@@ -10,6 +10,20 @@ var cache = require('libs/varcache/index');
 
 Available functions:
 
+* [clear](#clear)
+* [debug](#debug)
+* [delete](#delete)
+* [get](#get)
+* [hitCount](#hitCount)
+* [hitLog](#hitLog)
+* [keys](#keys)
+* [keysCount](#keysCount)
+* [missCount](#missCount)
+* [missLog](#missLog)
+* [recordHits](#recordHits)
+* [recordMisses](#recordMisses)
+* [set](#set)
+
 ## clear
 
 Clears the entire cache hold of entries.
