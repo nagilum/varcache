@@ -345,12 +345,12 @@ exports.recordMisses = function (value) {
  * @param function callbackSet
  *   (optional) Function to be called after the item is created and set in
  *              memory. Parameter for this function is the newly created record.
- * @param function callbackTimeout
+ * @param function callbackExpires
  *   (optional) Function to be called when the items expire date is passed and
  *              the item is removed from memory. Parameter for this function is
  *              the key if the item.
  */
-exports.set = function (key, data, ttl, callbackSet, callbackTimeout) {
+exports.set = function (key, data, ttl, callbackSet, callbackExpires) {
   if (typeof key !== 'string')
     throw '"key" must be string.';
 
@@ -405,8 +405,8 @@ exports.set = function (key, data, ttl, callbackSet, callbackTimeout) {
     record.timeout = setTimeout(function () {
       exports.delete(key);
 
-      if (typeof callbackTimeout === 'function')
-        callbackTimeout(key);
+      if (typeof callbackExpires === 'function')
+        callbackExpires(key);
     }, ttl);
   }
 
