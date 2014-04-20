@@ -124,16 +124,31 @@ Simple call:
 var hits = cache.hitLog();
 ```
 
+Can be extended to trigger a callback with the log.
+
 ```js
 cache.hitLog(function (hits) {
-	console.log('All recorded hits:');
 	console.log(hits);
 });
 ```
 
 ## keys
 
-XXX
+Returns all stored keys, which is convenient for management
+
+Simple call:
+
+```js
+var keys = cache.keys();
+```
+
+Can be extended to trigger a callback with the keys.
+
+```js
+cache.keys(function (keys) {
+	console.log(keys);
+});
+```
 
 ## keysCount
 
