@@ -1,9 +1,15 @@
 {
   "name": "varchar",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "A pure memory based cache for Javascript.",
+  "author": "Stian Hanger <pdnagilum@gmail.com>",
   "homepage": "https://github.com/nagilum/varcache",
-  "main": "index.js",
+  "url": "https://github.com/nagilum/varcache",
+  "keywords": [
+    "cache",
+    "memory",
+  ],
+  "main": "./index.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/nagilum/varcache.git"
