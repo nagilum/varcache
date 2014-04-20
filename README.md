@@ -2,6 +2,12 @@
 
 A pure memory based cache for Node.js
 
+## Installation
+
+```
+npm install varcache
+```
+
 ## Usage
 
 ```js
