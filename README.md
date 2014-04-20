@@ -1,6 +1,6 @@
 # varcache
 
-A pure memory based cache for Javascript.
+A pure memory based cache for Node.js
 
 ## Usage
 
