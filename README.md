@@ -190,7 +190,22 @@ cache.missCount(function (count) {
 
 ## missLog
 
-XXX
+Returns the log of misses, which returns the entire log for every miss against
+the cache. This requires that the recordMisses() function has been called.
+
+Simple call:
+
+```js
+var misses = cache.missLog();
+```
+
+Can be extended to trigger a callback with the log.
+
+```js
+cache.missLog(function (misses) {
+	console.log(misses);
+});
+```
 
 ## recordHits
 
