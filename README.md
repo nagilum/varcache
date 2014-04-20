@@ -96,7 +96,8 @@ var value = cache.get(
 ## hitCount
 
 Returns the number of key-hits recorded, which is how many times data has been
-requested from the cache.
+requested from the cache. This requires that the recordHist() function has been
+called.
 
 Simple call:
 
@@ -114,7 +115,21 @@ cache.hitCount(function (count) {
 
 ## hitLog
 
-XXX
+Returns the log of hits, which returns the entire log for every hit against the
+cache. This requires that the recordHist() function has been called.
+
+Simple call:
+
+```js
+var hits = cache.hitLog();
+```
+
+```js
+cache.hitLog(function (hits) {
+	console.log('All recorded hits:');
+	console.log(hits);
+});
+```
 
 ## keys
 
