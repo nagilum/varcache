@@ -258,8 +258,9 @@ many milliseconds the value is to be stored in the cache.
 cache.set('key', 'value', 5000);
 ```
 
-This will store the data for 5 seconds. Can also be extended to trigger
-callbacks when the data is set and when the data expires.
+This will store the data for 5 seconds. If you set 0, the data is stored
+without an expiration. Can also be extended to trigger callbacks when the data
+is set and when the data expires.
 
 ```js
 cache.set(
