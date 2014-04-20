@@ -70,7 +70,28 @@ cache.delete('test-key-1', function (key) {
 
 ## get
 
-XXX
+Gets the stored value for the given key in the cache.
+
+Simple call:
+
+```js
+var value = cache.get('key');
+```
+
+Can be extended to trigger callbacks for both hit and miss.
+
+```js
+var value = cache.get(
+	'key',
+	function (key, data) {
+		console.log('Found key: "' + key + '" with value:');
+		console.log(data);
+	},
+	function (key) {
+		console.log('No data cached for key: "' + key + '".');
+	}
+);
+```
 
 ## hitCount
 
