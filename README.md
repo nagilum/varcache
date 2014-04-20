@@ -209,7 +209,20 @@ cache.missLog(function (misses) {
 
 ## recordHits
 
-XXX
+Enables, or disables, recording of hits in the cache. Default this is set to
+false.
+
+Simple call:
+
+```js
+cache.recordHits();
+```
+
+Can be extended to specify the boolean value to turn it on or off.
+
+```js
+cache.recordHits(false);
+```
 
 ## recordMisses
 
