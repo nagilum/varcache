@@ -7,7 +7,7 @@
   "url": "https://github.com/nagilum/varcache",
   "keywords": [
     "cache",
-    "memory",
+    "memory"
   ],
   "main": "./index.js",
   "repository": {
