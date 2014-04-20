@@ -28,6 +28,10 @@ Available functions:
 
 Clears the entire cache hold of entries.
 
+Available parameters:
+
+* callback (function)
+
 Simple call:
 
 ```js
@@ -46,6 +50,10 @@ cache.clear(function () {
 
 Enables, or disables, debug mode, which logs evething it does to the console.
 
+Available parameters:
+
+* value (boolean)
+
 Simple call:
 
 ```js
@@ -61,6 +69,11 @@ cache.debug(false);
 ## delete
 
 Deletes an entry by-key or several items if an array of keys are passed.
+
+Available parameters:
+
+* key/keys (string/array)
+* callback (function)
 
 Simple call:
 
@@ -85,6 +98,12 @@ cache.delete('test-key-1', function (key) {
 ## get
 
 Gets the stored value for the given key in the cache.
+
+Available parameters:
+
+* key (string)
+* callbackHit (function)
+* callbackMiss (function)
 
 Simple call:
 
@@ -113,6 +132,10 @@ Returns the number of key-hits recorded, which is how many times data has been
 requested from the cache. This requires that the recordHist() function has been
 called.
 
+Available parameters:
+
+* callback (function)
+
 Simple call:
 
 ```js
@@ -132,6 +155,10 @@ cache.hitCount(function (count) {
 Returns the log of hits, which returns the entire log for every hit against the
 cache. This requires that the recordHist() function has been called.
 
+Available parameters:
+
+* callback (function)
+
 Simple call:
 
 ```js
@@ -150,6 +177,10 @@ cache.hitLog(function (hits) {
 
 Returns all stored keys, which is convenient for management
 
+Available parameters:
+
+* callback (function)
+
 Simple call:
 
 ```js
@@ -167,6 +198,10 @@ cache.keys(function (keys) {
 ## keysCount
 
 Returns the number of keys stored.
+
+Available parameters:
+
+* callback (function)
 
 Simple call:
 
@@ -188,6 +223,10 @@ Returns the number of key-misses recorded, which is how many times data has been
 requested without existing in the cache. This requires that the recordMisses()
 function has been called.
 
+Available parameters:
+
+* callback (function)
+
 Simple call:
 
 ```js
@@ -206,6 +245,10 @@ cache.missCount(function (count) {
 
 Returns the log of misses, which returns the entire log for every miss against
 the cache. This requires that the recordMisses() function has been called.
+
+Available parameters:
+
+* callback (function)
 
 Simple call:
 
@@ -226,6 +269,10 @@ cache.missLog(function (misses) {
 Enables, or disables, recording of hits in the cache. Default for this is set
 to false.
 
+Available parameters:
+
+* value (boolean)
+
 Simple call:
 
 ```js
@@ -243,6 +290,10 @@ cache.recordHits(false);
 Enables, or disables, recording of misses in the cache. Default for this is set
 to false.
 
+Available parameters:
+
+* value (boolean)
+
 Simple call:
 
 ```js
@@ -258,6 +309,14 @@ cache.recordMisses(false);
 ## set
 
 Creates, or updates, an item in the cache with all the fixins.
+
+Available parameters:
+
+* key (string)
+* data (any)
+* ttl (int)
+* callbackSet (function)
+* callbackExpires (function)
 
 Simple call:
 
