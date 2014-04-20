@@ -126,7 +126,7 @@ exports.delete = function (keys, callback) {
  * @param string key
  *   The key to fetch data from.
  * @param function callbackHit
- *   (optional) Function to call with the data.
+ *   (optional) Function to call with the key and data.
  * @param function callbackMiss
  *   (optional) Function to call if the data is not present in cache, with the
  *              key as parameter.
@@ -156,7 +156,7 @@ exports.get = function (key, callbackHit, callbackMiss) {
       data = record.data;
 
       if (typeof callbackHit === 'function')
-        callbackHit(data);
+        callbackHit(key, data);
 
       if (recordHits)
         addKeyHit(key);
