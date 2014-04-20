@@ -22,11 +22,11 @@ cache.set(
 	'Semething even more awesome...',
 	5000,
 	function (key, data) {
-		console.log('Just stored "' + key + '"" with:');
+		console.log('Just stored "' + key + '" with:');
 		console.log(data);
 	},
 	function (key) {
-		console.log('"' + key + '"" just expired.');
+		console.log('"' + key + '" just expired.');
 	}
 );
 ```
