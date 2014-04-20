@@ -243,4 +243,35 @@ cache.recordMisses(false);
 
 ## set
 
-XXX
+Creates, or updates, an item in the cache with all the fixins.
+
+Simple call:
+
+```js
+cache.set('key', 'value');
+```
+
+This stores the "value" by the "key" forever. Can be extended to include how
+many milliseconds the value is to be stored in the cache.
+
+```js
+cache.set('key', 'value', 5000);
+```
+
+This will store the data for 5 seconds. Can also be extended to trigger
+callbacks when the data is set and when the data expires.
+
+```js
+cache.set(
+	'key',
+	'value',
+	5000,
+	function (record) {
+		console.log('This is the newly created record, which contains some metadata:');
+		console.log(record);
+	},
+	function (key) {
+		console.log('The entry with key: "' + key + '" just expired.');
+	}
+);
+```
