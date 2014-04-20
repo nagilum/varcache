@@ -102,7 +102,7 @@ called.
 Simple call:
 
 ```js
-var hits = cache.hitCount();
+var count = cache.hitCount();
 ```
 
 Can be extended to trigger a callback with the number.
@@ -152,7 +152,21 @@ cache.keys(function (keys) {
 
 ## keysCount
 
-XXX
+Returns the number of keys stored.
+
+Simple call:
+
+```js
+var count = cache.keysCount();
+```
+
+Can be extended to trigger a callback with the number.
+
+```js
+cache.keysCount(function (count) {
+	console.log(count);
+});
+```
 
 ## missCount
 
