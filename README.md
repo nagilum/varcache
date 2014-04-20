@@ -46,7 +46,27 @@ cache.debug(false);
 
 ## delete
 
-XXX
+Deletes an entry by-key or several items if an array of keys are passed.
+
+Simple call:
+
+```js
+cache.delete('test-key-1');
+```
+
+Or with an array of keys:
+
+```js
+cache.delete([ 'test-key-2', 'test-key-3' ]);
+```
+
+Can be extended to trigger a callback for each key which is deleted.
+
+```js
+cache.delete('test-key-1', function (key) {
+	console.log('Just deleted key: "' + key + '".');
+});
+```
 
 ## get
 
