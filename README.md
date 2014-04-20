@@ -5,7 +5,42 @@ A pure memory based cache for Javascript.
 Usage:
 
 ```js
-var cache = require('libs/varcache/index');
+var cache = require('varcache');
+
+// Storing an item in the cache.
+cache.set('test', 'Something quite awesome!');
+
+// Getting an item from the cache.
+var test = cache.get('test');
+
+// Deleting an item from the cache.
+cache.delete('test');
+
+// Storing an item in the cache with expiration and callbacks.
+cache.set(
+	'test',
+	'Semething even more awesome...',
+	5000,
+	function (key, data) {
+		console.log('Just stored "' + key + '"" with:');
+		console.log(data);
+	},
+	function (key) {
+		console.log('"' + key + '"" just expired.');
+	}
+);
+```
+
+This should print this:
+
+```
+Something quite awesome!
+Just stored "test" with:
+Semething even more awesome...
+
+... 5 seconds later ...
+
+"test" just expired.
 ```
 
 Available functions:
