@@ -95,7 +95,22 @@ var value = cache.get(
 
 ## hitCount
 
-XXX
+Returns the number of key-hits recorded, which is how many times data has been
+requested from the cache.
+
+Simple call:
+
+```js
+var hits = cache.hitCount();
+```
+
+Can be extended to trigger a callback with the number.
+
+```js
+cache.hitCount(function (count) {
+	console.log('Total hits for keys are: ' + count.toString());
+});
+```
 
 ## hitLog
 
