@@ -170,7 +170,23 @@ cache.keysCount(function (count) {
 
 ## missCount
 
-XXX
+Returns the number of key-misses recorded, which is how many times data has been
+requested without existing in the cache. This requires that the recordMisses()
+function has been called.
+
+Simple call:
+
+```js
+var count = cache.missCount();
+```
+
+Can be extended to trigger a callback with the number.
+
+```js
+cache.missCount(function (count) {
+	console.log('Total misses for keys are: ' + count.toString());
+});
+```
 
 ## missLog
 
