@@ -2,7 +2,7 @@
 
 A pure memory based cache for Javascript.
 
-Usage:
+## Usage
 
 ```js
 var cache = require('varcache');
@@ -43,7 +43,7 @@ Semething even more awesome...
 "test" just expired.
 ```
 
-Available functions:
+## Available functions
 
 * [clear](#clear)
 * [debug](#debug)
@@ -58,6 +58,8 @@ Available functions:
 * [recordHits](#recordHits)
 * [recordMisses](#recordMisses)
 * [set](#set)
+
+# Functions
 
 ## clear
 
