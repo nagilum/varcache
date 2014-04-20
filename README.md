@@ -12,6 +12,8 @@ Available functions:
 
 ## clear
 
+Clears the entire cache hold of entries.
+
 Simple call:
 
 ```js
@@ -28,7 +30,19 @@ cache.clear(function () {
 
 ## debug
 
-XXX
+Enables, or disables, debug mode, which logs evething it does to the console.
+
+Simple call:
+
+```js
+cache.debug();
+```
+
+Can be extended to specify the boolean value to turn it on or off.
+
+```js
+cache.debug(false);
+```
 
 ## delete
 
