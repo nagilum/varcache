@@ -1,5 +1,5 @@
 {
-  "name": "varchar",
+  "name": "varcache",
   "version": "0.0.1",
   "description": "A pure memory based cache for Javascript.",
   "author": "Stian Hanger <pdnagilum@gmail.com>",
