@@ -1,6 +1,6 @@
 {
   "name": "varcache",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A pure memory based cache for Javascript.",
   "author": "Stian Hanger <pdnagilum@gmail.com>",
   "homepage": "https://github.com/nagilum/varcache",

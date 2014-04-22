@@ -148,7 +148,8 @@ exports.get = function (key, callbackHit, callbackMiss) {
 
   // Analyse the record for passed expiration and pass it along.
   if (typeof record !== 'undefined') {
-    if (record.expires <= dateTimeNow()) {
+    if (record.expires !== 0 &&
+        record.expires <= dateTimeNow()) {
       exports.delete(key);
       miss = true;
     }
